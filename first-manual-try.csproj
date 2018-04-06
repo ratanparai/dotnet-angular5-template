@@ -40,4 +40,8 @@
     </ItemGroup>
   </Target>
 
+  <Target Name="BuildDistFolder" BeforeTargets="Run">
+    <Exec Command="ng build"/>
+  </Target>
+
 </Project>
