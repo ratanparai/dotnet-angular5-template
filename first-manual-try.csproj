@@ -28,7 +28,7 @@
   <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
     <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
     <Exec Command="npm install" />
-    <Exec Command="ng build --prod" />
+    <Exec Command="ng build --prod --output-hasing none" />
 
     <!-- Include the newly-built files in the publish output -->
     <ItemGroup>
@@ -41,7 +41,7 @@
   </Target>
 
   <Target Name="BuildDistFolder" BeforeTargets="Run">
-    <Exec Command="ng build"/>
+    <Exec Command="ng build --prod --output-hasing none"/>
   </Target>
 
 </Project>
