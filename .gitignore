@@ -36,3 +36,6 @@ msbuild.wrn
 
 # node module directory
 node_modules/
+
+# ignore codecoverage folder
+coverage/
