@@ -43,6 +43,12 @@ namespace first_manual_try
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
+
+                routes.MapSpaFallbackRoute(
+                    name: "spa-default",
+                    defaults: new {Controllers = "Home", Action = "Index"}
+                );
+
             });
         }
     }
