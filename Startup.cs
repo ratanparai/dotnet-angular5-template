@@ -45,10 +45,8 @@ namespace first_manual_try
                     template: "{controller=Home}/{action=Index}/{id?}");
 
                 routes.MapSpaFallbackRoute(
-                    name: "spa-default",
-                    defaults: new {Controllers = "Home", Action = "Index"}
-                );
-
+                    name: "spa-fallback",
+                    defaults: new { controller = "Home", action = "Index" });
             });
         }
     }
